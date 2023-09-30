@@ -12,3 +12,8 @@ console.log(`Saroj Kumar`);
 // End statement without semicolon also work.
 console.log("Siwan Bihar")
 
+// Also print the any statement on the output screen.
+document.write("abc");
+
+
+
