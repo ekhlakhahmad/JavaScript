@@ -5,3 +5,6 @@ if(a % 2 ===0){
 else{
     document.write("<br> Odd Number");
 }
+
+
+
