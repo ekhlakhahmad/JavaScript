@@ -13,7 +13,7 @@ console.log(`Saroj Kumar`);
 console.log("Siwan Bihar")
 
 // Also print the any statement on the output screen.
-document.write("abc");
+console.log("abc");
 
 
 
