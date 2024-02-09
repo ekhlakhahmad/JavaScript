@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .container {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            border-radius: 20px;
+            padding: 20px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            background-color: #fff;
+        }
+
+        input {
+            height: 50px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 18px;
+
+        }
+
+        button {
+            font-weight: bold;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            width: 100%;
+            font-weight: bold;
+            height: 50px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputBtn">
+            <input type="text" placeholder="First No" id="first">
+        <input type="text" placeholder="Second No" id="second">
+        </div>
+
+        <div class="operatorBtn">
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+            <button id="multiply">*</button>
+            <button id="devide">/</button>
+            <button id="mod">%</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const firstNo = document.getElementById("first");
+        const secondNo = document.getElementById("second");
+
+        const plusBtn = document.getElementById("plus");
+        const minusBtn = document.getElementById("minus");
+        const multiplyBtn = document.getElementById("multiply");
+        const divideBtn = document.getElementById("devide");
+        const modBtn = document.getElementById("mod");
+
+        const resultBtn = document.getElementById("result")
+
+
+        plusBtn.addEventListener("click", function(){
+            var res = parseInt(firstNo.value) + parseInt(second.value);
+            
+            resultBtn.innerHTML = res;
+        })
+        minusBtn.addEventListener("click", function(){
+            var res = parseInt(firstNo.value) - parseInt(second.value);
+            
+            resultBtn.innerHTML = res;
+        })
+        multiplyBtn.addEventListener("click", function(){
+            var res = parseInt(firstNo.value) * parseInt(second.value);
+            
+            resultBtn.innerHTML = res;
+        })
+        divideBtn.addEventListener("click", function(){
+            var res = parseInt(firstNo.value) / parseInt(second.value);
+            
+            resultBtn.innerHTML = res;
+        })
+        modBtn.addEventListener("click", function(){
+            var res = parseInt(firstNo.value) % parseInt(second.value);
+            
+            resultBtn.innerHTML = res;
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
