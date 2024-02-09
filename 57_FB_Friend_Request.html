@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Friend Request</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: cadetblue;
+        }
+        .main-container{
+            width: 320px;
+            height: 480px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+        .image img{
+            width: 220px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        h2{
+            color: red;
+            margin: 10px;
+        }
+        button{
+            padding: 8px;
+            font-size: 14px;
+            border: 2px solid;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #addfriend{
+            background-color: teal;
+        }
+        #remfriend{
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1623091411395-09e79fdbfcf3?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5kaWFuJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D" alt="">
+        </div>
+        <h1>Angel Priya</h1>
+        <h2>Stranger</h2>
+        <div class="btn">
+            <button id="addfriend">Add Friend</button>
+            <button id="remfriend">Remove Friend</button>
+        </div>
+    </div>
+    <script>
+        const addfriend = document.getElementById("addfriend");
+        const remfriend = document.getElementById("remfriend");
+
+        var st = document.querySelector("h2");
+
+        addfriend.addEventListener("click",function(){
+            st.innerText = "Friend";
+            st.style.color = "green";
+        })
+        remfriend.addEventListener("click", function(){
+            st.innerHTML = "Stranger";
+            st.style.color = "orangered"
+        })
+    </script>
+</body>
+</html>
